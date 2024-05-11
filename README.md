@@ -27,6 +27,25 @@ cd {ultralytics}/yolov5
 python gen_wts.py -w yolov5s.pt -o yolov5s.wts
 ```
 
+2.从wts生成engine文件
+
+```
+//将wts文件拷贝到工作空间中
+***
+*  修改src/yolov5/include/yololayer.h中的CLASS_NUM，INPUT_H，INPUT_W
+
+*  修改src/yolov5/include/names.hpp文件中的数据（一定要大于等于你的数据）
+
+***
+//在工作空间中，先编译文件
+colcon build --packages-select target_bbox_msgs
+source install/setup.bash
+colcon build
+//然后生成engine文件
+ros2 run yolov5 yolov5 -s yolov5s6.wts yolov5s6.engine s6
+
+```
+
 
 ## 参与贡献
 
