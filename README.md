@@ -6,9 +6,7 @@
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+‘git clone https://gitee.com/mamou_space/yolov5_tensorrt_and_ros2.git’
 
 #### 使用说明
 
