@@ -30,23 +30,32 @@ python gen_wts.py -w yolov5s.pt -o yolov5s.wts
 2.从wts生成engine文件
 
 
-
-```
-//将wts文件拷贝到工作空间中
-
 *  ***修改src/yolov5/include/yololayer.h中的CLASS_NUM，INPUT_H，INPUT_W***
 
 *  ***修改src/yolov5/include/names.hpp文件中的数据（一定要大于等于你的数据）***
 
 
-//在工作空间中，先编译文件
+*  将wts文件拷贝到工作空间中
+*  在工作空间中，先编译文件
+```
 colcon build --packages-select target_bbox_msgs
 source install/setup.bash
 colcon build
-//然后生成engine文件
-ros2 run yolov5 yolov5 -s yolov5s6.wts yolov5s6.engine s6
+```
+*  然后生成engine文件
+```
+ros2 run yolov5 yolov5 -s [.wts] [.engine] [n/s/m/l/x/n6/s6/m6/l6/x6 or c/c6 gd gw]  // 生成engine文件
+ros2 run yolov5 yolov5 -d [.engine] [image folder]  // 使用engine文件
+```
+*  For example ，samples中是你要测试的图片，大小不能超过你设置的
+```
+
+ros2 run yolov5 yolov5 -s yolov5s.wts yolov5s.engine s
+ros2 run yolov5 yolov5 -d yolov5s.engine samples
 
 ```
+
+3.结合ros2进行图像识别与发布
 
 
 ## 参与贡献
