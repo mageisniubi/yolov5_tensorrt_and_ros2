@@ -6,7 +6,7 @@
 
 #### 安装教程
 
-‘git clone https://gitee.com/mamou_space/yolov5_tensorrt_and_ros2.git’
+``Use `code` in your Markdown file.``
 
 #### 使用说明
 
