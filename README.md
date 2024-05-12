@@ -68,6 +68,7 @@ ros2 run yolov5 yolov5 -d yolov5s.engine samples
 *  修改./src/yolov5/launch/yolov5.launch.py 文件中的***parameters***
 
 *  ***注意：处理图像输入应该是BGR模式，如果不是，需要自己修改img_callback，对获取图像进行处理***
+![这是图片](/ "Magic Gardens")
 
 ***回到工作空间目录下***
 ```
