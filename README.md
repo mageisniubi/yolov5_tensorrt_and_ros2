@@ -8,7 +8,7 @@
 
 ## 安装教程
 
-打开本地工作空间文件夹终端执行`git clone https://gitee.com/mamou_space/yolov5_tensorrt_and_ros2.git`
+打开本地文件夹终端执行`git clone https://gitee.com/mamou_space/yolov5_tensorrt_and_ros2.git`
 
 
 ## 使用说明
